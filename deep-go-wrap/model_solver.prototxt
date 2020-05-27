@@ -1,0 +1,29 @@
+# reduce the learning rate after 8 epochs (4000 iters) by a factor of 10
+
+# The train/test net protocol buffer definition
+net: "model.prototxt"
+# test_iter specifies how many forward passes the test should carry out.
+# In the case of MNIST, we have test batch size 100 and 100 test iterations,
+# covering the full 10,000 testing images.
+test_iter: 1000
+# Carry out testing every 500 training iterations.
+test_interval: 90961
+# The base learning rate, momentum and the weight decay of the network.
+base_lr: 0.01
+momentum: 0.9
+gamma: 0.1
+stepsize: 90961
+# weight_decay: 0.004
+# # The learning rate policy
+lr_policy: "step"
+# Display every 100 iterations
+display: 1000
+# The maximum number of iterations
+# 210204 iteration = 1 epoch
+max_iter: 9096100
+# snapshot intermediate results
+snapshot: 90961
+snapshot_format: HDF5
+snapshot_prefix: "level_6_model/detlef"
+# solver mode: CPU or GPU
+solver_mode: GPU
