@@ -21,6 +21,7 @@ class H5Dataset(Dataset):
         return self.dataset_len
 
 
+
 def load_data(batchSize):
     # load data for train & test
     train_set = H5Dataset('data/train.hdf5')
